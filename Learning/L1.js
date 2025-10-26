@@ -45,3 +45,4 @@ console.log(v1.indexOf('z')) // if character is not present in a given string th
 
 
 //length this is the property which return no of character in a given String
+console.log(v1.length)
