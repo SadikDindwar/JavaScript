@@ -46,3 +46,12 @@ console.log(v1.indexOf('z')) // if character is not present in a given string th
 
 //length this is the property which return no of character in a given String
 console.log(v1.length)
+
+//lastIndexOf() is used to get the last index of provided character or string in a given string
+console.log(v1.lastIndexOf("i")) // 19
+console.log(v1.lastIndexOf("ipt")) // 7 coz ipt starts from 7th index
+
+//slice() this method is used to return substring of the given string by using starting and ending index 
+console.log(v1.slice(0, 1)) // here ending index is exclusive or endind index-1
+console.log(v1.slice(1, 3))
+console.log(v1.slice(11)) // if we donot provide the ending index it will return all the character from starting endex
