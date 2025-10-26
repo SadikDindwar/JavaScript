@@ -32,4 +32,16 @@ console.log(typeof d3); // op : undefind
 console.log(typeof 79)
 
 
+//String mehods
 
+let v1 = "javascript programming"
+
+//charAt() used to access character at perticular index
+console.log(v1.charAt(2))
+
+//indexOf() used to check index of particular character in a given string
+console.log(v1.indexOf('s'))
+console.log(v1.indexOf('z')) // if character is not present in a given string then it will return -1
+
+
+//length this is the property which return no of character in a given String
