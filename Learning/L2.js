@@ -32,6 +32,8 @@ console.log(Number.isInteger(2))
 console.log(Number.isInteger(v1))
 console.log(Number.isInteger(v2))
 
+//
+
 
 
 
