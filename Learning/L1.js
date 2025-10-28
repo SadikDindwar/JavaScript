@@ -11,7 +11,7 @@ Primitive data types
 4.BigInt
 5.Symbol
 6.Undefined
-7.Null
+7.Null.
 
 Non-Primitive data type 
 8.Object
