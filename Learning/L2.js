@@ -25,6 +25,7 @@ console.log(Number(true))
 console.log(Number(false)) 
 
 //Number Functions
+//Number is the inbuilt Object in JavaScript which has many inbuilt methods for different operations.
 
 //Number.isInteger() funtion determines weather the passed value is the integer or not
 console.log(Number.isInteger(2))
