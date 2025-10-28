@@ -1,3 +1,5 @@
+import { isPrime } from "../Practice/P1.js";
+
 //1. Data Types
 
 /*
@@ -17,6 +19,7 @@ Non-Primitive data type
 
 //String
 //String can be declared in ' ' or in " "
+
 let d1 = "Hello";
 let d2 = 'hi';
 
@@ -67,6 +70,10 @@ console.log(v1.includes("prod"))
 //split() this method will split the given string from the character we provide and return an array of string
 console.log(v1.split(" "))
 console.log(v1.split("a"))
+
+
+
+console.log(isPrime(8))
 
 
 
