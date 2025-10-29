@@ -1,6 +1,6 @@
 import { isPrime } from "../Practice/P1.js";
 
-//1. Data Types
+//Data Types
 
 /*
 In JavaScript we have 8 types of data that is 7 primitive data types and 1 non-primitive data type object. 
