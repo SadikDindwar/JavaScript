@@ -5,3 +5,21 @@ function generateRandom(name){
 }
 
 console.log(generateRandom("Sadik"))
+
+// game
+
+let player ="stone";
+let random = Math.floor((Math.random() * 3)+1);
+let computer = random === 1 ? "stone":random === 2 ? "paper" : "scissor";
+
+function check(player , computer){
+    if(player === computer) return `Player : ${player}\nComputer : ${computer}\nMatch Draw`;
+    else if((player === "stone" && computer === "paper") || (player === "paper" && computer === "scissor") || (player === "scissor" && computer === "stone")){
+        return `Player : ${player}\nComputer : ${computer}\nComputer Win.`;
+    }
+    else{
+         return `Player : ${player}\nComputer : ${computer}\nPlayer Win.`;
+    }
+}
+
+console.log(check(player  , computer));
