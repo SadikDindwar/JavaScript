@@ -40,6 +40,12 @@ console.log(myArray2);
 myArray2.splice(0) // if we donot provide delete count then it will delete all from starting index.
 console.log(myArray2);
 
+const myArray3 =[1,2,3,4,5];
+myArray3.splice(1 , 0, 67); // at index 1 donot delete anything and add 67 at index 1 and shift the remaining array.
+
+console.log(myArray3);
+
+
 
 
 
