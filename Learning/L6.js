@@ -46,6 +46,16 @@ myArray3.splice(1 , 0, 67); // at index 1 donot delete anything and add 67 at in
 console.log(myArray3);
 
 
+//slice() : slice() mthod is used to retrun sub-Array.
+//example : slice(startingIndex, endingIndex); 
+
+const myArray4 = [1,2,3,4,5,6,7,8,9,10];
+const newArray1= myArray4.slice(0, 4);
+console.log(newArray1);
+
+
+
+
 
 
 
