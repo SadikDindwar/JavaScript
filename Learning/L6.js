@@ -63,6 +63,44 @@ const v4 = myArray4.join();
 console.log(v4);
 console.log(typeof v4);
 
+//concat() : helps in concatinate two Arrays.
+const array1 =["1" , "2", "3"];
+const array2 = ["4", "5" , "6"];
+
+const newArray2 = array1.concat(array2);
+console.log(newArray2);
+
+
+const array3 =["7", "8" , "9"];
+
+const newArray3 = array1.concat(array2).concat(array3);
+console.log(newArray3);
+
+// using spread operation to concatinate multiple arrays
+
+const v5 = [...array1, ...array2, ...array3];
+console.log(typeof v5 , v5);
+
+
+
+//multi-dimentional array or nested arrays
+
+const v6 = ["mango" , "apple" , "banana"];
+const v7 = [1, 2, 3];
+const v8 = [v6 , v7];
+console.log(v8[0]); // return all v6 array elements
+console.log(v8[1]); // return all v7 array elements
+
+console.log(v8[0][1]); // return v6 arrays 1st index element that is apple.
+
+console.log(v8[1][2]); // return v7 arrays 2nd index element that is 3.
+
+
+
+
+
+
+
 
 
 
