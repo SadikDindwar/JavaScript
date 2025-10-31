@@ -104,9 +104,3 @@ console.log(v8[1][2]); // return v7 arrays 2nd index element that is 3.
 
 
 
-
-
-
-
-
-
