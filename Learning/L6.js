@@ -22,3 +22,23 @@ console.log(myArray);
 
 let v1 =90;
 // delete v1; // not allowed for vaiables 
+
+
+//array.splice(startIndex, deleteCount, item1, item2, ...)
+/*
+startIndex	             The index where to start changing the array
+deleteCount	             How many elements to remove from that index
+item1, item2, ...	     (Optional) New elements to add at that position
+*/
+
+const myArray2 = [1,2,3,4,5,6,7,8,9,10];
+console.log(myArray2);
+
+myArray2.splice(1, 3);
+console.log(myArray2);
+
+myArray2.splice(0) // if we donot provide delete count then it will delete all from starting index.
+console.log(myArray2);
+
+
+
