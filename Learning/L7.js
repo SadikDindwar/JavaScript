@@ -96,6 +96,14 @@ Arrow Function:
 
 
 
+// Very Important Notes related to Objects and Functions.
+/*
+
+ 
+ */
+
+
+
 
 
 
