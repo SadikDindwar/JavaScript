@@ -5,9 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="CSS/main.css">
-    <script src="Learning/L2.js"></script>
+    <!-- <script src="Learning/L2.js"></script> -->
+    
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <h1 id="3">Hello World!</h1>
+    <form action="">
+    <input type="text" id="1">
+    <button>submit</button>
+    </form>
+    
+    <div id ="2" style="height: 100px; width: 100px; background-color: aqua; margin: 100px;"></div>
 </body>
+
+   <script>
+    document.getElementById("1").addEventListener("submit" , ()=>{
+        const colors =["black", "white" , "blue" , "purple", "red"];
+        document.getElementById("2").style.backgroundColor=colors[(Math.floor(Math.random()* colors.length))];
+    });
+
+
+    </script>
+
 </html>
