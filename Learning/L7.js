@@ -188,4 +188,50 @@ Keep going up until null.
 
  // Object methods.
  
+ // Object.create(proto) : used to create Object with a Prototype
+
+//Object.setPrototypeOf(obj, prototype) : used to set prototype of given object
+//example.
+
+const obj2={
+    name:"obj2"
+}
+
+const obj3={
+    id: 90
+}
+Object.setPrototypeOf(obj3 , obj2); // here for obj3 the obj2 will be set as prototype.
+
+//Object.getPrototypeOf(obj) : it give the prototype of the given object.
+//example
+console.log(Object.getPrototypeOf(obj3));
+
+
+//Object.keys(obj) : it return keys in the form of array.
+//Example
+console.log(Object.keys(employee));
+
+//Object.values(obj): it returns values of the object in the form of array.
+//Example
+console.log(Object.values(employee))
+
+//Object.entries(obj) : returns array of key - value pairs.
+//Example
+console.log(Object.entries(employee));
+
+//Object.freeze(obj) : It freezes the Object so that no additon , deletions or updation allowed.
+// Example
+Object.freeze(obj2);
+const isTrue = Object.isFrozen(obj2);// checks weather the object is frozen or not.
+console.log(isTrue);
+
+//Object.seal(obj) : seal the object - properties cannot be added or deleted but can be changed.
+//Example
+Object.seal(obj3);
+isTrue= Object.isSealed(obj3); // Check weather the object is Sealed or not.
+
+
+
+
+
  
