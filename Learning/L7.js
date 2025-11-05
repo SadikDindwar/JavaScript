@@ -222,7 +222,7 @@ console.log(Object.entries(employee));
 //Object.freeze(obj) : It freezes the Object so that no additon , deletions or updation allowed.
 // Example
 Object.freeze(obj2);
-const isTrue = Object.isFrozen(obj2);// checks weather the object is frozen or not.
+let isTrue = Object.isFrozen(obj2);// checks weather the object is frozen or not.
 console.log(isTrue);
 
 //Object.seal(obj) : seal the object - properties cannot be added or deleted but can be changed.
@@ -235,3 +235,38 @@ isTrue= Object.isSealed(obj3); // Check weather the object is Sealed or not.
 
 
  
+
+
+// Example of the function which take an Object as a parameter.
+
+function doStuff(vehicle){
+    let brandName = vehicle.name;
+    let speed = vehicle.speed;
+    let color = vehicle.color;
+    let millage = vehicle.getMillage();
+     
+    return "Name of brand : "+brandName +" speed : "+ speed +"Km/sec color : "+color+" milage : "+millage + ".";
+
+}
+const vehicle = {
+    name: "bmw",
+    speed: 100,
+    color: "black",
+    getMillage: function(){
+        return this.speed/2;
+    } 
+};
+
+const vehicleInfo1 = doStuff(vehicle);
+const vehicleInfo2 = doStuff({
+    name: "audi",
+    speed: 150,
+    color: "Deeep Black",
+    getMillage: function(){
+        return this.speed/2;
+    }
+});
+
+
+console.log(vehicleInfo1);
+console.log(vehicleInfo2);
