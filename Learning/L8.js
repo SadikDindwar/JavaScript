@@ -1,4 +1,4 @@
-// Async Java Script (V.Imp)
+// Async JavaScript (V.Imp)
 
 
 
