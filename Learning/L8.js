@@ -1,4 +1,1 @@
-// Async JavaScript (V.Imp)
-
-
-
+// High Order Functions (HOC) and Callbacks.
