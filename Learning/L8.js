@@ -76,4 +76,10 @@ console.log(v6);
 
 
 
-// CallBack Hell  
+// CallBack Hell 
+/*
+Callback hell is nesting callback inside the callback tp the degree that the code  become unreadable and unmaintanable.
+To get rid of callback hell we can make use of Promises and Async/Await.
+
+
+*/ 
