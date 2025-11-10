@@ -112,7 +112,7 @@ const promiseFour = new Promise((resolve , reject)=>{
 
 });
 
-promiseFour.then(f1, f2);
+promiseFour.then(f1, f2);  // if resolves then f1 will be called and if rejected then f2 will be called.
 
 
 //
