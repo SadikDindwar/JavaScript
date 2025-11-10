@@ -196,3 +196,29 @@ promiseNine.then((data)=>{
 console.log("This is Sync code");
 
 
+// function that returns Promise example :
+
+
+const v1 = "sadiq";
+function promiseFunction(){
+    return new Promise((resolve, reject)=>{
+        if(v1.includes("sadik")){
+            resolve("Name Matched");
+        }
+        else{
+            reject("Name Not Matched");
+        }
+    })
+}
+
+promiseFunction().then((data)=>{
+    console.log(data);
+}).catch((data)=>{
+    console.log(data);
+});
+
+
+
+
+
+
