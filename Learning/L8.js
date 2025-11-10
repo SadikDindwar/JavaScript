@@ -80,6 +80,53 @@ console.log(v6);
 /*
 Callback hell is nesting callback inside the callback tp the degree that the code  become unreadable and unmaintanable.
 To get rid of callback hell we can make use of Promises and Async/Await.
-
-
 */ 
+
+//Example for Call Back function.
+
+function task1(callback){
+    setTimeout(()=>{
+    console.log("task 1 is complete");
+    callback();
+    }, 2000);
+    
+    
+}
+
+function task2(callback){
+    setTimeout(()=>{
+    console.log("task 2 is complete");
+    callback();
+    }, 5000);
+    
+}
+
+function task3(callback){
+   setTimeout(()=>{
+    console.log("task 3 is complete");
+    callback();
+    }, 1000);
+    
+}
+function task4(callback){
+    setTimeout(()=>{
+    console.log("task 4 is complete");
+    callback();
+    }, 50);
+    
+}
+
+// task1(task2(task3(task4(()=> console.log("all tasks completed"))))); // wrong syntax we are not passing the callbacks 
+// we are calling the methods instead.
+
+task1(()=>{
+    task2(()=>{
+        task3(()=>{
+            task4(()=>{
+                console.log("All tasks completed.");
+            });
+        });
+
+    });
+});
+
