@@ -1,4 +1,17 @@
 // Promises (V.Imp)
+/*
+-> then(()=>{}) : .then will take one callback and it will run if the promise is resolved(); 
+-> .then(()=>{}, ()=>{}); : .then will also take two callbacks first callback will be executed when the promise is resolved,
+    and if the promise is rejected then the second callback will be executed.
+-> And if we donot want to handle both resolve and reject inside then() we can use catch() with then.
+   syntax : promise.then((data)=>{ console.log("if Resolved")}).catch((data)=>{console.log(idf Rejected)});.
+-> we Can also check multiple promise at once using Promise.all() and perform someting if all the promise resolved and if any of the promise
+   rejected then catch() will be executed. 
+   suntax: Promise.all([promiseOne, promiseTwo, promiseThree]).then((data)=>{ //if all reslves }).catch((data)=>{//if any one rejects});
+-> we can also add finally() at last and it will be executed no matter if the promise is resolved or rejected.
+   syntax : promise.then(callBack).catch(callBack).finally(()=>{});
+   remember finally(()=>{})
+   will not recieve any value like resolved value or err message etc.   
 
 
 
@@ -6,8 +19,17 @@
 
 
 
+*/
 
-let value  = 13;
+
+
+
+
+
+// Promise Examples :
+
+//
+let value  = 18;
 const promise = new Promise((resolve , reject)=>{
     if(value> 10){
         resolve("Everything is Good.");
@@ -91,7 +113,7 @@ const promiseFour = new Promise((resolve , reject)=>{
 });
 
 promiseFour.then(f1, f2);
-console.log("This is Sync code");
+
 
 //
 
@@ -129,4 +151,48 @@ Promise.all([promiseFive , promiseSix, promiseSeven]).then((data)=>{
 (data)=>{
     console.log(data, " Something went wrong");
 });
+
+
+
+
+//then() with catch
+
+const promiseEight = new Promise((resolve , reject)=>{
+    if(value >= 10 ){
+        resolve("Yes Resolved");
+    }
+    else{
+        reject("No Rejected");
+    }
+
+});
+
+promiseEight.then((data)=>{
+    console.log(data);
+}).catch((data)=>{
+    console.log(data);
+})
+
+//finally()
+
+
+const promiseNine = new Promise((resolve , reject)=>{
+    if(value >10){
+        resolve("Resolved...");
+    }
+    else{
+        reject("Rejected...");
+    }
+});
+
+promiseNine.then((data)=>{
+    console.log(data);
+}).catch((data)=>{
+    console.log(data);
+}).finally(()=>{
+    console.log("Finally block executed");
+});
+
+console.log("This is Sync code");
+
 
