@@ -45,11 +45,66 @@ so as shown above every Promise has Two parts Promise maker and Promise reciever
 */
 
 
-async function promiseOne(){
 
-    const jsonData = fetch("https://api.weather.gov/gridpoints/OKX/35,35/forecast");
+//Example without async await
+function promiseFunction(){
+    fetch("https://api.weather.gov/gridpoints/OKX/35,35/forecast")
+    .then((jsonData)=>{
+        return jsonData.json();
+    })
+    .then((jsObj)=>{
+        console.log(jsObj);
+    });
+} 
+promiseFunction();
 
-    const jsObj =  jsonData.json();
+
+
+//Example of using async and await for above code.
+async function asyncFunc(){
+
+    const jsonData = await fetch("https://api.weather.gov/gridpoints/OKX/35,35/forecast");
+
+    const jsObj =  await jsonData.json();
 
     console.log(jsObj);
 }
+
+asyncFunc();
+
+
+//Example 2 for using async and await
+
+function f1(){
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(true){
+                resolve("everything is OK");
+            }
+            else{
+                reject("Not OK");
+            }
+        }, 1000)
+    })
+}
+
+// using then() chain to handle above promise function
+f1().then((data)=>{
+    return data.toUpperCase();
+})
+.then((data)=>{
+    console.log(data);
+});
+
+//using async await for better readbility
+
+async function asyncFunc2(){
+    const data = await f1();
+    const capital = await data.toUpperCase();  // await is optional here cause toUpperCase is synchronous method.
+    console.log(capital);
+
+}
+
+asyncFunc2();
+
+
