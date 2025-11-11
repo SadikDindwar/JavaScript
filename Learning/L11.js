@@ -44,6 +44,14 @@ so as shown above every Promise has Two parts Promise maker and Promise reciever
 
 */
 
+/*
+Rules to be Followed while using async await
+1. async and await must be used together for eg we cannot use await outside the async function.In some exceptional cases we can use await 
+outside async function like while we are using JS Modules and Chorome dev tool console also allow this thing. 
+
+
+*/
+
 
 
 //Example without async await
