@@ -237,24 +237,52 @@ function httpRequest(){
 });
 }
 
-httpRequest().then((obj)=>{
-    console.log(obj);
-}).catch((data)=>{
-    console.log(data);
-});
+// httpRequest().then((obj)=>{
+//     console.log(obj);
+// }).catch((data)=>{
+//     console.log(data);
+// });
 
 
 
-fetch("http://localhost:8080/employee/getAll").then((data)=>{
-    return data.json();
-}).then((data)=>{
-   console.log(data);
-   return data;
-}).then((data)=>{
-    console.log(data[2].name);
-}).catch((data)=>{
-    console.log(data);
-});
+// fetch("http://localhost:8080/employee/getAll").then((data)=>{
+//     return data.json();
+// }).then((data)=>{
+//    console.log(data);
+//    return data;
+// }).then((data)=>{
+//     console.log(data[2].name);
+// }).catch((data)=>{
+//     console.log(data);
+// });
 
 
+
+//checking for pending state
+
+function promiseTen(){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve("OK 200");
+        }, 2000);
+    });
+}
+
+
+const v2 = promiseTen(); // this a Async call
+console.log(v2);   // Here the v2 is promise and its still not resolved so it will return Pending. 
+
+
+
+// calling external Api.
+
+function f3(){
+    fetch("https://api.weather.gov/gridpoints/OKX/35,35/forecast").then((data)=>{
+        return data.json();
+    }).then((data)=>{
+        console.log(data);
+    });
+}
+
+f3();
 
