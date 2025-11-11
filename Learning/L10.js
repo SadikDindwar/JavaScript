@@ -196,7 +196,7 @@ promiseNine.then((data)=>{
 console.log("This is Sync code");
 
 
-// function that returns Promise example :
+// function that returns Promise. example :
 
 
 const v1 = "sadiq";
