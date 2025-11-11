@@ -222,3 +222,39 @@ promiseFunction().then((data)=>{
 
 
 
+
+//Making http call to my Spring Boot backend application running locally on port number 8080 :
+
+function httpRequest(){
+    return new Promise((resolve , reject)=>{
+        fetch("http://localhost:8080/employee/getAll").then((data)=>{
+    const jsObj=data.json();
+    resolve(jsObj);
+    }).catch((data)=>{
+    reject(data);
+
+});
+});
+}
+
+httpRequest().then((obj)=>{
+    console.log(obj);
+}).catch((data)=>{
+    console.log(data);
+});
+
+
+
+fetch("http://localhost:8080/employee/getAll").then((data)=>{
+    return data.json();
+}).then((data)=>{
+   console.log(data);
+   return data;
+}).then((data)=>{
+    console.log(data[2].name);
+}).catch((data)=>{
+    console.log(data);
+});
+
+
+
