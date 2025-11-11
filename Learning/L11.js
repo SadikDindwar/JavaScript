@@ -47,5 +47,9 @@ so as shown above every Promise has Two parts Promise maker and Promise reciever
 
 async function promiseOne(){
 
-    const jsonData = fetch("")
+    const jsonData = fetch("https://api.weather.gov/gridpoints/OKX/35,35/forecast");
+
+    const jsObj =  jsonData.json();
+
+    console.log(jsObj);
 }
