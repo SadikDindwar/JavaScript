@@ -1,7 +1,7 @@
 // Async / Await (V.Imp)
 
 /*
-Async/Await: is JavaScript syntax that lets us write asynchronous code in a clean, step-by-step and readable way.
+Async/Await: is JavaScript syntax that lets us handle proises and it help us to write  asynchronous code in a clean, step-by-step and readable way.
 It works on top of Promises, and behind the scenes it uses microtasks and the event loop to handle all the waiting.
 
 Async: Async is a keyword that is used before the function to tell the function will return a Promise and that fnction may have Asynchronous code.
@@ -44,11 +44,18 @@ so as shown above every Promise has Two parts Promise maker and Promise reciever
 
 */
 
+
+
+
 /*
 Rules to be Followed while using async await
-1. async and await must be used together for eg we cannot use await outside the async function.In some exceptional cases we can use await 
-outside async function like while we are using JS Modules and Chorome dev tool console also allow this thing. 
-
+1.async and await must be used together for eg we cannot use await outside the async function.In some exceptional cases we can use await 
+  outside async function like while we are using JS Modules and Chorome dev tool console also allow this thing. 
+2.async await only affects the promise reciever not the promise creater.
+3.We can await any function that returns Promise.
+4.Any function can be converted to async.
+5.all async functions returns a promises.
+6.async await let us handle errors using try/catch.
 
 */
 
