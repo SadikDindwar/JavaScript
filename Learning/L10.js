@@ -1,4 +1,7 @@
 // Promises (V.Imp)
+
+
+//vutftf
 /*
 -> then(()=>{}) : .then will take one callback and it will run if the promise is resolved(); 
 -> .then(()=>{}, ()=>{}); : .then will also take two callbacks first callback will be executed when the promise is resolved,
@@ -20,8 +23,6 @@
 
 
 */
-
-
 
 
 
@@ -237,24 +238,24 @@ function httpRequest(){
 });
 }
 
-// httpRequest().then((obj)=>{
-//     console.log(obj);
-// }).catch((data)=>{
-//     console.log(data);
-// });
+httpRequest().then((obj)=>{
+    console.log(obj);
+}).catch((data)=>{
+    console.log(data);
+});
 
 
 
-// fetch("http://localhost:8080/employee/getAll").then((data)=>{
-//     return data.json();
-// }).then((data)=>{
-//    console.log(data);
-//    return data;
-// }).then((data)=>{
-//     console.log(data[2].name);
-// }).catch((data)=>{
-//     console.log(data);
-// });
+fetch("http://localhost:8080/employee/getAll").then((data)=>{
+    return data.json();
+}).then((data)=>{
+   console.log(data);
+   return data;
+}).then((data)=>{
+    console.log(data[2].name);
+}).catch((data)=>{
+    console.log(data);
+});
 
 
 
