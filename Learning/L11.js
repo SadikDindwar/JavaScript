@@ -56,7 +56,8 @@ Rules to be Followed while using async await
 4.Any function can be converted to async.
 5.all async functions returns a promises.
 6.async await let us handle errors using try/catch.
-
+7.we can use the catch() block with await but its not a standard way instead use try/catch
+8. Remember when a prommise is rejected() you must have catch() block or you should use try catch block to handle the rejection 
 */
 
 
@@ -71,7 +72,7 @@ function promiseFunction(){
         console.log(jsObj);
     });
 } 
-promiseFunction();
+//promiseFunction();
 
 
 
@@ -85,7 +86,7 @@ async function asyncFunc(){
     console.log(jsObj);
 }
 
-asyncFunc();
+//asyncFunc();
 
 
 //Example 2 for using async and await
@@ -123,3 +124,41 @@ async function asyncFunc2(){
 asyncFunc2();
 
 
+//handling errors using try catch
+
+function promiseThree(){
+    return new Promise((resolve, reject)=>{
+        if(!true){
+            resolve("Resolved no exception....");
+        }
+        else{
+            reject("Something went wrong.");
+        }
+
+        
+    })
+}
+
+async function asyncFunc3(){
+    try{
+        const data = await promiseThree();
+        console.log(data);
+    }
+    catch(err){
+        console.log(`Exception Occured : ${err}`);
+    }
+}
+
+asyncFunc3();
+
+
+
+//using catch()
+async function asyncFunc4(){
+    const data = await promiseThree()
+    .catch((err)=>{
+        console.log(err);
+    });
+    console.log(data);   //when you use catch() the data will be undefined or you will loose the data once you come out of chain. 
+}
+asyncFunc4();
